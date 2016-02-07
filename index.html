@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Vega Tree</title>
+   <link rel="stylesheet" type="text/css" href="jquery.vTree.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.js"></script>
+   <script type="text/javascript" src="jquery.vTree.js"></script>
+   <script type="text/javascript">
+      $(function(){
+         $('#simple-list').vTree({url: 'data.json'});
+         $('#list').vTree({
+            url: 'data.json',
+            clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+            onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.leaf_id+'</a> '+data.name); } // Переопределяем Функцию, которая заполняет данными лист
+         });
+         $('#catalog').vTree({
+            url: 'data.json',
+            config: 'v-catalog',
+            clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+            onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.name+'</a>'); }
+         });
+         $('#tree').vTree({
+            url: 'data.json',
+            config: 'v-tree',
+            setLeaf: function () {  // Переопределяем стандартный контейнер для листа, добавляем сслыку
+               return $('<div style="border: 1px solid black; background: #eee; padding: 5px;"><a class="leaf-body" href="javascript:;"></a><div>');
+            }
+         });
+      });
+   </script>
+   <style>
+      pre { border: 1px solid black; background: #eee; }
+   </style>
+</head>
+
+<body>
+   <h1>jQuery Plugin: Vega Tree</h1>
+   <h2>Simple View</h2>
+   <pre>
+
+      $('#simple-list').vTree({url: 'data.json'});
+   </pre>
+   <div id="simple-list"></div>
+   <h2>Specific View</h2>
+   <pre>
+
+      $('#list').vTree({
+         url: 'data.json',
+         clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+         onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.leaf_id+'&lt;/a&gt; '+data.name); } // Переопределяем Функцию, которая заполняет данными лист
+      });
+   </pre>
+   <div id="list"></div>
+   <h2>Catalog View</h2>
+   <pre>
+
+      $('#catalog').vTree({
+         url: 'data.json',
+         config: 'v-catalog',
+         clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+         onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.name+'&lt;/a&gt;'); }
+      });
+   </pre>
+   <div id="catalog"></div>
+   <h2>Tree View</h2>
+   <pre>
+
+      $('#tree').vTree({
+         url: 'data.json',
+         config: 'v-tree',
+         setLeaf: function () { // Переопределяем стандартный контейнер для листа, добавляем сслыку
+            return $('&lt;div style="border: 1px solid black; background: #eee; padding: 5px;"&gt;&lt;a class="leaf-body" href="javascript:;"&gt;&lt;/a&gt;&lt;div&gt;');
+         }
+      });
+   </pre>
+   <div id="tree"></div>
+</body>
+</html>
