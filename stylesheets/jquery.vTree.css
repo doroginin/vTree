@@ -1,0 +1,77 @@
+/* Vega Tree CSS */
+
+/* Общий CSS */
+
+.bud.expanded .branch
+{
+   display: block;
+}
+
+.bud.collapsed .branch
+{
+   display: none;
+}
+
+/* CSS для конфига v-tree*/
+
+.v-tree table.branch {
+   border-collapse: collapse;
+}
+
+.v-tree table.branch td {
+   vertical-align: top; /* Для IE 7 */
+}
+
+.v-tree td.bud {
+   margin: 0px;
+   padding: 0px;
+}
+
+.v-tree .bud-body > .leaf {
+   margin: 0px 5px 0px 5px;
+}
+
+.v-tree div.bud-link-wrap   { border-color: #aaa; border-style: solid; border-width: 0px; }
+.v-tree div.bud-link-top    { border-color: #aaa; border-style: solid; border-width: 0px; }
+.v-tree div.bud-link-bottom { border-color: #aaa; border-style: solid; border-width: 0px; }
+
+.v-tree td.bud > div.bud-link-wrap { border-top-width: 1px; }
+.v-tree td.bud > div.bud-link-wrap > div.bud-link-top    { border-right-width : 1px; height: 20px; width: 0px; }
+.v-tree td.bud > div.bud-link-wrap > div.bud-link-bottom { border-right-width : 1px; height: 20px; width: 0px; }
+
+.v-tree td.bud.no-leaves > div.bud-link-wrap > div.bud-link-bottom { display: none; }
+
+.v-tree td.bud.first > div.bud-link-wrap { border: none; }
+.v-tree td.bud.last  > div.bud-link-wrap { border: none; }
+
+.v-tree td.bud.first > div.bud-link-wrap > div.bud-link-top { border-top-width : 1px; border-left-width  : 1px; border-right-width : 0px; height: 20px; width: 50%; margin-left: 50%;  //float: right; -moz-border-radius-topleft: 5px; }
+.v-tree td.bud.last  > div.bud-link-wrap > div.bud-link-top { border-top-width : 1px; border-right-width : 1px; border-left-width : 0px; height: 20px; width: 50%; margin-right: 50%; //float: left; -moz-border-radius-topright: 5px;  }
+.v-tree td.bud.first.last > div.bud-link-wrap > div.bud-link-top { border-right-width : 1px; height: 20px; width: 0px; margin-left: 0px; margin-right: 0px; //float: none; }
+.v-tree td.bud > div.bud-link-wrap > .leaf { //clear: both; }
+
+.v-tree td.bud.root > div.bud-link-wrap > div.bud-link-top { display: none; }
+.v-tree td.bud.root > div.bud-link-wrap { border: none; }
+
+.v-tree td.bud.loading > div.bud-link-wrap > div.bud-link-bottom { height: 16px; width: 16px; border: none; background: url(img/vTree-loader.gif) no-repeat; }
+
+/* CSS для конфига v-catalog */
+
+.v-catalog div.bud > div.leaf           { padding-left: 20px; background: url(img/vTree-folder.gif) no-repeat left center; }
+.v-catalog div.bud.collapsed > div.leaf { padding-left: 20px; background: url(img/vTree-folder.gif) no-repeat left center; }
+.v-catalog div.bud.expanded  > div.leaf { padding-left: 20px; background: url(img/vTree-folder-open.gif) no-repeat left center; }
+.v-catalog div.bud.no-leaves > div.leaf { padding-left: 20px; background: url(img/vTree-leaf.gif) no-repeat left center; }
+.v-catalog div.bud.loading   > div.leaf { padding-left: 20px; background: url(img/vTree-loader.gif) no-repeat left center; }
+
+.v-catalog div.branch-link-wrap { border-color: #aaa; border-style: solid; border-width: 0px; }
+.v-catalog div.bud-link-top     { border-color: #aaa; border-style: solid; border-width: 0px; }
+
+.v-catalog div.branch-link-wrap                   { border-left-width: 1px; }
+.v-catalog div.branch.root > div.branch-link-wrap { border: none; margin-left: 0px; }
+.v-catalog div.branch > div.branch-link-wrap      { margin-left: 16px; }
+.v-catalog div.bud.root > div.branch > div.branch-link-wrap { margin-left: 8px; }
+
+.v-catalog div.bud-link-top    { width: 8px; border-top-width: 1px; float: left; margin-top: 10px; }
+.v-catalog div.bud-link-bottom { clear: both; }
+.v-catalog div.leaf { margin-left: 10px; }
+.v-catalog div.bud.root > div.leaf { margin-left: 0px; }
+.v-catalog div.bud.root > div.bud-link-top { display: none; }

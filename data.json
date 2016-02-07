@@ -1,0 +1,8 @@
+{"leaves": [
+      {"leaf_id": 1, "name": "node 1", "no_leaves": 0},
+      {"leaf_id": 2, "name": "node 2", "no_leaves": 0},
+      {"leaf_id": 3, "name": "node 2", "no_leaves": 1},
+      {"leaf_id": 4, "name": "node 3", "no_leaves": 1},
+      {"leaf_id": 5, "name": "node 4", "no_leaves": 1}
+   ]
+}
