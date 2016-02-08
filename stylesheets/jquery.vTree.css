@@ -52,7 +52,7 @@
 .v-tree td.bud.root > div.bud-link-wrap > div.bud-link-top { display: none; }
 .v-tree td.bud.root > div.bud-link-wrap { border: none; }
 
-.v-tree td.bud.loading > div.bud-link-wrap > div.bud-link-bottom { height: 16px; width: 16px; border: none; background: url(img/vTree-loader.gif) no-repeat; }
+.v-tree td.bud.loading > div.bud-link-wrap > div.bud-link-bottom { height: 16px; width: 16px; border: none; background: url(../image/vTree-loader.gif) no-repeat; }
 
 /* CSS для конфига v-catalog */
 
