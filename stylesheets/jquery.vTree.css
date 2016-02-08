@@ -56,11 +56,11 @@
 
 /* CSS для конфига v-catalog */
 
-.v-catalog div.bud > div.leaf           { padding-left: 20px; background: url(img/vTree-folder.gif) no-repeat left center; }
-.v-catalog div.bud.collapsed > div.leaf { padding-left: 20px; background: url(img/vTree-folder.gif) no-repeat left center; }
-.v-catalog div.bud.expanded  > div.leaf { padding-left: 20px; background: url(img/vTree-folder-open.gif) no-repeat left center; }
-.v-catalog div.bud.no-leaves > div.leaf { padding-left: 20px; background: url(img/vTree-leaf.gif) no-repeat left center; }
-.v-catalog div.bud.loading   > div.leaf { padding-left: 20px; background: url(img/vTree-loader.gif) no-repeat left center; }
+.v-catalog div.bud > div.leaf           { padding-left: 20px; background: url(../image/vTree-folder.gif) no-repeat left center; }
+.v-catalog div.bud.collapsed > div.leaf { padding-left: 20px; background: url(../image/vTree-folder.gif) no-repeat left center; }
+.v-catalog div.bud.expanded  > div.leaf { padding-left: 20px; background: url(../image/vTree-folder-open.gif) no-repeat left center; }
+.v-catalog div.bud.no-leaves > div.leaf { padding-left: 20px; background: url(../image/vTree-leaf.gif) no-repeat left center; }
+.v-catalog div.bud.loading   > div.leaf { padding-left: 20px; background: url(../image/vTree-loader.gif) no-repeat left center; }
 
 .v-catalog div.branch-link-wrap { border-color: #aaa; border-style: solid; border-width: 0px; }
 .v-catalog div.bud-link-top     { border-color: #aaa; border-style: solid; border-width: 0px; }
