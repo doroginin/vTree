@@ -107,7 +107,7 @@
          var root_body = root.find('.bud-body:first');
          if (!root_body.length) { root_body = root; root_body.addClass('bud-body'); }
 
-         $.post(_settings.url, {id: id}, function(data)
+         $.get(_settings.url, {id: id}, function(data)
          {
             _request_count--;
             if (data.leaves.length)
