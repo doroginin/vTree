@@ -20,7 +20,7 @@
               $('#list').vTree({
                   url: 'data.json',
                   clickSelector: 'a',  // This property sets selector for click event, which will be use to expand/collapse branch
-                  onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.leaf_id+'</a> '+data.name); } // Callback to fill the content of the leaf
+                  onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.leaf_id+'</a> '+data.name); } // The leaf container will be filled by result of this callback (html)
               });
               $('#catalog').vTree({
                   url: 'data.json',
@@ -31,7 +31,7 @@
               $('#tree').vTree({
                   url: 'data.json',
                   config: 'v-tree',
-                  setLeaf: function () {  // The default leaf html container will be replaced by result of this callback
+                  setLeaf: function () { // The default leaf container will be replaced by result of this callback (html)
                       return $('<div style="border: 1px solid black; background: #eee; padding: 5px;"><a class="leaf-body" href="javascript:;"></a><div>');
                   }
               });
@@ -68,7 +68,7 @@
           $('#list').vTree({
             url: 'data.json',
             clickSelector: 'a', // This property sets selector for click event, which will be use to expand/collapse branch
-            onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.leaf_id+'&lt;/a&gt; '+data.name); } // Переопределяем Функцию, которая заполняет данными лист
+            onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.leaf_id+'&lt;/a&gt; '+data.name); } // The leaf container will be filled by result of this callback (html)
           });
         </pre>
         <div id="list"></div>
@@ -89,7 +89,7 @@
           $('#tree').vTree({
             url: 'data.json',
             config: 'v-tree',
-            setLeaf: function () { // The default leaf html container will be replaced by result of this callback
+            setLeaf: function () { // The default leaf container will be replaced by result of this callback (html)
               return $('&lt;div style="border: 1px solid black; background: #eee; padding: 5px;"&gt;&lt;a class="leaf-body" href="javascript:;"&gt;&lt;/a&gt;&lt;div&gt;');
             }
           });
