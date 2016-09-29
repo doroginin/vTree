@@ -19,19 +19,19 @@
               $('#simple-list').vTree({url: 'data.json'});
               $('#list').vTree({
                   url: 'data.json',
-                  clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
-                  onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.leaf_id+'</a> '+data.name); } // Переопределяем Функцию, которая заполняет данными лист
+                  clickSelector: 'a',  // This property sets selector for click event, which will be use to expand/collapse branch
+                  onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.leaf_id+'</a> '+data.name); } // Callback to fill the content of the leaf
               });
               $('#catalog').vTree({
                   url: 'data.json',
                   config: 'v-catalog',
-                  clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+                  clickSelector: 'a', // This property sets selector for click event, which will be use to expand/collapse branch
                   onLeafShow: function (el, data) { el.append('<a href="javascript:;">'+data.name+'</a>'); }
               });
               $('#tree').vTree({
                   url: 'data.json',
                   config: 'v-tree',
-                  setLeaf: function () {  // Переопределяем стандартный контейнер для листа, добавляем сслыку
+                  setLeaf: function () {  // The default leaf html container will be replaced by result of this callback
                       return $('<div style="border: 1px solid black; background: #eee; padding: 5px;"><a class="leaf-body" href="javascript:;"></a><div>');
                   }
               });
@@ -67,7 +67,7 @@
 
           $('#list').vTree({
             url: 'data.json',
-            clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+            clickSelector: 'a', // This property sets selector for click event, which will be use to expand/collapse branch
             onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.leaf_id+'&lt;/a&gt; '+data.name); } // Переопределяем Функцию, которая заполняет данными лист
           });
         </pre>
@@ -78,7 +78,7 @@
           $('#catalog').vTree({
             url: 'data.json',
             config: 'v-catalog',
-            clickSelector: 'a', // Задаем селектор для элементов по которым можно кликать, чтобы развернуть ветку
+            clickSelector: 'a', // This property sets selector for click event, which will be use to expand/collapse branch
             onLeafShow: function (el, data) { el.append('&lt;a href="javascript:;"&gt;'+data.name+'&lt;/a&gt;'); }
           });
         </pre>
@@ -89,7 +89,7 @@
           $('#tree').vTree({
             url: 'data.json',
             config: 'v-tree',
-            setLeaf: function () { // Переопределяем стандартный контейнер для листа, добавляем сслыку
+            setLeaf: function () { // The default leaf html container will be replaced by result of this callback
               return $('&lt;div style="border: 1px solid black; background: #eee; padding: 5px;"&gt;&lt;a class="leaf-body" href="javascript:;"&gt;&lt;/a&gt;&lt;div&gt;');
             }
           });
